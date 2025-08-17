@@ -1,0 +1,150 @@
+@import url(../../colors.css);
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.hero-content{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero-text {
+  padding-left: 50px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+.hero-text h1 {
+  color: var(--text-color);
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.hero-text h2{
+  color: var(--orange-color);
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  color: var(--text-color);
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.hero-image{
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('./Profile.webp');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-image-overlay{
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  transition: background 0.3s ease; 
+}
+.hero-image-overlay:hover{
+  background: var(--background-color-transparent);
+}
+
+.hero-buttons{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.hero-button{
+  position: relative;
+  padding: 10px 20px;
+  background: transparent;
+  color: var(--text-color);
+  border: 3px solid var(--text-color);
+  border-radius: 10px;
+  cursor: pointer;
+  gap: 50px;
+  z-index: 1;
+}
+
+.hero-button-hover-effect{
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 10px;
+  width: 0%;
+  background: var(--orange-color-transparent);
+  transition: width 0.3s ease;
+}
+
+.hero-button:hover .hero-button-hover-effect{
+  width: 100%;
+}
+
+.hero-button:active{
+  color: var(--orange-color);
+}
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--orange-color);
+}
+
+.logo-container h2{
+  margin-left: 10px;
+  font-size: 24px;
+  font-weight:100;
+}
+
+.logo {
+  margin-left: 20px;
+  width: 50px;
+  height: auto;
+  background: var(--logo-background);
+  border-radius: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li button {
+  text-decoration: none;
+  color: var(--text-color);
+  border: none;
+  background: none;
+  font-size: 18px;
+}
+
+nav ul li button:active, .select {
+  color: var(--orange-color);
+}
+
+nav ul li button:hover{
+  color: var(--orange-color);
+  transition: color 0.3s ease;
+}
