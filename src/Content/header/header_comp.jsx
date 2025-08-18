@@ -3,9 +3,10 @@ import './header_style.css'
 
 import { useState } from 'react'
 
-const [currentSection, setCurrentSection] = useState('home')
 
 const Header_comp = () => {
+  const [currentSection, setCurrentSection] = useState('home')
+  
   return (
     <>
       <header className="hero">
