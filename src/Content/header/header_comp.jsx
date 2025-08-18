@@ -18,23 +18,43 @@ const Header_comp = () => {
         <h2>Felsberg-Design</h2>
       </a>
       <ul>
-        <li><button className="select" href="#">Home</button></li>
-        <li><button href="#">Über mich</button></li>
-        <li><button href="#">Projekte</button></li>
-        <li><button href="#">Kontakt</button></li>
+            <li>
+              <button
+              onClick={() => { setCurrentSection('home') }}
+              className={currentSection === 'home' ? "select" : ''}
+              href="#">Home</button>
+            </li>
+            <li>
+              <button
+                onClick={() => { setCurrentSection('about') }}
+                className={currentSection === 'about' ? "select" : ''}
+                href="#">Über mich</button>
+            </li>
+            <li>
+              <button
+                onClick={() => { setCurrentSection('projects') }}
+                className={currentSection === 'projects' ? "select" : ''}
+                href="#">Projekte</button>
+            </li>
+            <li>
+              <button
+                onClick={() => { setCurrentSection('contact') }}
+                className={currentSection === 'contact' ? "select" : ''}
+                href="#">Kontakt</button>
+            </li>
       </ul>
     </nav>
     <div className="hero-content">
       <div className="hero-text">
         <h1>Hallo, Ich bin Sebastian Felsberg</h1>
-        <h2>Frontend Developer</h2>
+          <h2>Frontend Developer</h2>
         <p>Willkommen auf meiner Portfolio-Seite! Hier finden Sie eine Auswahl meiner Arbeiten und Projekte.</p>
         <div className="hero-buttons">
           <button className="hero-button"><div className="hero-button-hover-effect"></div>Mehr erfahren</button>
           <button className="hero-button"><div className="hero-button-hover-effect"></div>Lass uns reden</button>
         </div>
       </div>
-    <div className="hero-image" alt="Profilbild von Sebastian Felsberg">
+    <div className="hero-image" alt="Profilbild von Sebastian Felsberg (Ich)">
       <span className="hero-image-overlay"></span>
     </div>
   </div>
