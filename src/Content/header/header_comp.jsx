@@ -1,5 +1,7 @@
 import React from 'react'
+import Aboutme_comp from './about/aboutme_comp'
 import './header_style.css'
+
 
 import { useState } from 'react'
 
@@ -27,7 +29,6 @@ const Header_comp = () => {
                 href="#"
               >
                 Home
-          
               </button>
             </li>
             <li>
@@ -39,7 +40,6 @@ const Header_comp = () => {
                 href="#"
               >
                 Über mich
-         
               </button>
             </li>
             <li>
@@ -51,7 +51,6 @@ const Header_comp = () => {
                 href="#"
               >
                 Projekte
-  
               </button>
             </li>
             <li>
@@ -63,35 +62,43 @@ const Header_comp = () => {
                 href="#"
               >
                 Kontakt
-             
               </button>
             </li>
           </ul>
         </nav>
-        <div className="hero-content">
-          <div className="hero-text">
-            <h1>Hallo, Ich bin Sebastian Felsberg</h1>
-            <h2>Frontend Developer</h2>
-            <p>
-              Willkommen auf meiner Portfolio-Seite! Hier finden Sie eine
-              Auswahl meiner Arbeiten und Projekte.
-            </p>
-            <div className="hero-buttons">
-              <button className="hero-button">
-                <div className="hero-button-hover-effect"></div>Mehr erfahren
-              </button>
-              <button className="hero-button">
-                <div className="hero-button-hover-effect"></div>Lass uns reden
-              </button>
+        {currentSection === "home" ? (
+          <div className="hero-content">
+            <div className="hero-text">
+              <h1>Hallo, Ich bin Sebastian Felsberg</h1>
+              <h2>Frontend Developer</h2>
+              <p>
+                Willkommen auf meiner Portfolio-Seite! Hier finden Sie eine
+                Auswahl meiner Arbeiten und Projekte.
+              </p>
+              <div className="hero-buttons">
+                <button className="hero-button">
+                  <div
+                    onClick={() => { setCurrentSection("about"); }}
+                    className="hero-button-hover-effect"></div>Mehr erfahren
+                </button>
+                <button className="hero-button">
+                  <div
+                    onClick={() => { setCurrentSection("contact"); }}
+                    className="hero-button-hover-effect">
+                  </div>
+                  Lass uns reden
+                </button>
+              </div>
+            </div>
+            <div
+              className="hero-image"
+              alt="Profilbild von Sebastian Felsberg (Ich)"
+            >
+              <span className="hero-image-overlay"></span>
             </div>
           </div>
-          <div
-            className="hero-image"
-            alt="Profilbild von Sebastian Felsberg (Ich)"
-          >
-            <span className="hero-image-overlay"></span>
-          </div>
-        </div>
+        ) : null}
+        {currentSection === "about" ? <Aboutme_comp /> : null}
       </header>
     </>
   );
