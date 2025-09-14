@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar_comp from './Navbar_comp.jsx'
 import Aboutme_comp from './about/aboutme_comp'
 import './header_style.css'
 
@@ -12,60 +13,8 @@ const Header_comp = () => {
   return (
     <>
       <header className="hero">
-        <nav className="navbar">
-          <a href="" className="logo-container">
-            <div className="logo">
-              <img src="./FD-Logo.svg" alt="Felsberg-Design Logo"></img>
-            </div>
-            <h2>Felsberg-Design</h2>
-          </a>
-          <ul>
-            <li>
-              <button
-                onClick={() => {
-                  setCurrentSection("home");
-                }}
-                className={currentSection === "home" ? "select" : ""}
-                href="#"
-              >
-                Home
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => {
-                  setCurrentSection("about");
-                }}
-                className={currentSection === "about" ? "select" : ""}
-                href="#"
-              >
-                Über mich
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => {
-                  setCurrentSection("projects");
-                }}
-                className={currentSection === "projects" ? "select" : ""}
-                href="#"
-              >
-                Projekte
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => {
-                  setCurrentSection("contact");
-                }}
-                className={currentSection === "contact" ? "select" : ""}
-                href="#"
-              >
-                Kontakt
-              </button>
-            </li>
-          </ul>
-        </nav>
+        <Navbar_comp currentSection={currentSection} setCurrentSection={setCurrentSection} />
+        
         {currentSection === "home" ? (
           <div className="hero-content">
             <div className="hero-text">
@@ -90,12 +39,12 @@ const Header_comp = () => {
                 </button>
               </div>
             </div>
-            <div
+            <img
+              src='./profile.webp'
               className="hero-image"
               alt="Profilbild von Sebastian Felsberg (Ich)"
             >
-              <span className="hero-image-overlay"></span>
-            </div>
+            </img>
           </div>
         ) : null}
         {currentSection === "about" ? <Aboutme_comp /> : null}

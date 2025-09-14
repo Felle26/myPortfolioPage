@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 80%;
 }
 
 .hero-text {
@@ -38,32 +38,6 @@
   color: var(--text-color);
   font-size: 20px;
   margin-bottom: 30px;
-}
-
-.hero-image{
-  overflow: hidden;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url('./Profile.webp');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.hero-image-overlay{
-  position: absolute;
-  top: 100px;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  background: transparent;
-  transition: background 0.3s ease; 
-}
-.hero-image-overlay:hover{
-  background: var(--background-color-transparent);
 }
 
 .hero-buttons{
@@ -120,7 +94,7 @@
 
 .logo {
   margin-left: 20px;
-  width: 50px;
+  width: 200px;
   height: auto;
   background: var(--logo-background);
   border-radius: 10px;

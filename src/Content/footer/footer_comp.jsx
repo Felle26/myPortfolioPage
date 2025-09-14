@@ -1,7 +1,7 @@
 import React from 'react'
 import './footer_style.css'
 
-const Footer_comp = () => {
+const Footer_comp = (props) => {
   return (
     <>
       <footer>
@@ -11,7 +11,8 @@ const Footer_comp = () => {
         <a href="#"><img src="./linkedin-in-brands-solid-full.svg" alt="LinkedIn"></img></a>
         <a href="#"><img src="./github-brands-solid-full.svg" alt="GitHub"></img></a>
       </div>
-      <p>&copy; 2021 - {new Date().getFullYear()} Felsberg-Design. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2021 - {new Date().getFullYear()} Felsberg-Design. Alle Rechte vorbehalten.</p>
+        <button onClick={() => props.showImpressum()}>Impressum</button>
     </footer>
     </>
   )
