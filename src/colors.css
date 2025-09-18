@@ -1,8 +1,8 @@
 :root{
-  --logo-background: #f5f5f510;
   --background-color: #000;
-  --background-color-transparent: #0000006e;
   --text-color: #f5f5f5;
+  --background-color-lightmode: #f5f5f5;
+  --text-color-lightmode: #000;
   --orange-color: #EC593A;
   --orange-color-transparent: #ec583a71;
 }

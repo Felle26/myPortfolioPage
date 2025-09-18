@@ -1,6 +1,7 @@
 import React from 'react'
+import './header_style.css'
 
-const Navbar_comp = ({ currentSection, setCurrentSection }) => {
+const Navbar_comp = ({ currentSection, setCurrentSection, currentTheme, setCurrentTheme }) => {
   return (
     <nav className="navbar">
       <a href="" className="logo-container">
@@ -11,6 +12,7 @@ const Navbar_comp = ({ currentSection, setCurrentSection }) => {
       <ul>
         <li>
           <button
+            type="button"
             onClick={() => {
               setCurrentSection("home");
             }}
@@ -22,6 +24,7 @@ const Navbar_comp = ({ currentSection, setCurrentSection }) => {
         </li>
         <li>
           <button
+            type="button"
             onClick={() => {
               setCurrentSection("about");
             }}
@@ -33,6 +36,7 @@ const Navbar_comp = ({ currentSection, setCurrentSection }) => {
         </li>
         <li>
           <button
+            type="button"
             onClick={() => {
               setCurrentSection("projects");
             }}
@@ -44,6 +48,7 @@ const Navbar_comp = ({ currentSection, setCurrentSection }) => {
         </li>
         <li>
           <button
+            type="button"
             onClick={() => {
               setCurrentSection("contact");
             }}
@@ -53,6 +58,7 @@ const Navbar_comp = ({ currentSection, setCurrentSection }) => {
             Kontakt
           </button>
         </li>
+        <li><button type='button' onClick={() => setCurrentTheme(currentTheme === 'dark' ? 'light' : 'dark')}>{currentTheme === 'dark' ? 'Light Mode' : 'Dark Mode'}</button></li>
       </ul>
     </nav>
   );
