@@ -34,7 +34,7 @@ const Home_comp = ({ setCurrentSection }) => {
           </div>
         </div>
         <img
-          src="./profile.png"
+          src="./profile.webp"
           className="hero-image"
           alt="Profilbild von Sebastian Felsberg (Ich)"
         ></img>
