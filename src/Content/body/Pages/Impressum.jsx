@@ -1,30 +1,41 @@
 import React from 'react'
+import "./impressum_style.css";
 
 const Impressum = () => {
   return (
-    <div>
-      <h2>Impressum</h2>
-      <p>
-        Angaben gemäß § 5 TMG:
-      </p>
+    <div className="impressum-container">
+      <h1>Impressum</h1>
+
       <p>
         Sebastian Felsberg
+        <br />
+        felsberg-design.de Web &amp; App Entwicklung
+        <br />
+        Tulpenstra&szlig;e 18
+        <br />
+        01705 Freital
       </p>
+
+      <h2>Kontakt</h2>
       <p>
-        Musterstraße 1
+        Telefon: 01736722738
+        <br />
+        E-Mail: sebastianfelsberg@web.de
       </p>
+
+      <h2>
+        Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle
+      </h2>
       <p>
-        12345 Musterstadt
+        Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren
+        vor einer Verbraucherschlichtungsstelle teilzunehmen.
       </p>
-      <h3>Kontakt:</h3>
+
       <p>
-        Telefon: 01234-56789
-      </p>
-      <p>
-        E-Mail: <a href="mailto:info@mustermann.de">info@mustermann.de</a>
+        Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a>
       </p>
     </div>
-  )
+  );
 }
 
 export default Impressum
